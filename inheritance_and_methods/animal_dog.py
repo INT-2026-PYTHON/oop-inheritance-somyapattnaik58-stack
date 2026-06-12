@@ -67,3 +67,19 @@ Rex is a Beagle
 =================================================
 
 """
+class Animal:
+    def _init_(self, name, sound):
+        self.name = name
+        self.sound = sound
+
+    def speak(self):
+        print(f"{self.name} says {self.sound}")
+
+
+class Dog(Animal):
+    def _init_(self, name, breed):
+        super()._init_(name, "Woof")
+        self.breed = breed
+
+    def describe(self):
+        print(f"{self.name} is a {self.breed}")
